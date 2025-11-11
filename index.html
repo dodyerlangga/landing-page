@@ -1,1 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakpia 29 Songo Likur - Asli Kumbu Kacang Ijo</title>
+    <!-- Muat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Menggunakan font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBEB; /* Latar belakang kuning gading kalem */
+        }
+        /* Style kustom untuk warna HIJAU TUA (Deep Forest Green) */
+        .brand-green {
+            background-color: #1E402E; 
+        }
+        /* Style kustom untuk warna COKELAT TUA (Tawny Brown) */
+        .brand-accent-brown {
+            color: #8B5E3C; 
+        }
+        /* Efek hover pada tombol */
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(30, 64, 46, 0.6); /* Shadow dari warna hijau tua */
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Header/Navigasi Responsif -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold brand-accent-brown">BAKPIA 29</h1>
+            
+            <!-- Desktop Menu (Hidden on mobile, flex on medium and up) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#tentang-kami" class="text-base font-semibold text-gray-700 hover:text-[#8B5E3C] transition duration-300">Tentang Kami</a>
+                <a href="#keunggulan" class="text-base font-semibold text-gray-700 hover:text-[#8B5E3C] transition duration-300">Produk Kami</a>
+                <a href="#contact" class="text-base font-semibold text-gray-700 hover:text-[#8B5E3C] transition duration-300">Kontak</a>
+            </nav>
+
+            <!-- CTA Button (Visible on medium and up) -->
+            <a href="#contact" class="hidden md:inline-block px-4 py-2 text-sm font-bold text-white bg-amber-500 rounded-lg shadow hover:bg-amber-600 transition duration-300">Pesan Sekarang</a>
+            
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="menu-button" onclick="toggleMenu()" class="md:hidden p-2 rounded-md brand-accent-brown border border-[#8B5E3C] hover:bg-gray-100 focus:outline-none">
+                <!-- Hamburger Icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown (Hidden by default, shown by JS) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#tentang-kami" onclick="toggleMenu()" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50">Tentang Kami</a>
+            <a href="#keunggulan" onclick="toggleMenu()" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50">Produk Kami</a>
+            <a href="#contact" onclick="toggleMenu()" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50">Kontak</a>
+            <a href="#contact" onclick="toggleMenu()" class="block px-4 py-3 text-base font-bold text-white brand-green text-center mt-2">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="brand-green text-white py-16 sm:py-24 md:py-32 flex items-center justify-center">
+        <div class="text-center max-w-4xl px-4">
+            <!-- Avatar/Logo Placeholder -->
+            <div class="mx-auto w-24 h-24 sm:w-32 sm:h-32 bg-amber-50 rounded-full flex items-center justify-center mb-6 shadow-xl">
+                <span class="text-6xl sm:text-7xl" role="img" aria-label="Bakpia">🥟</span>
+            </div>
+            
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Bakpia 29 Songo Likur
+            </h2>
+            <p class="text-lg sm:text-xl font-light italic mb-8">
+                "Asli kumbu kacang ijo" — Kelezatan klasik khas Jogja di Semarang.
+            </p>
+            
+            <!-- Call to Action Button -->
+            <a href="#contact" id="cta-hero" class="cta-button inline-block px-10 py-4 text-lg font-bold text-white bg-amber-500 rounded-xl shadow-lg transition duration-300 hover:bg-amber-600">
+                Pesan Sekarang Juga!
+            </a>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section (BARU) -->
+    <section id="tentang-kami" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl font-bold brand-accent-brown mb-6">Tentang Kami</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                Bakpia 29 Songo Likur hadir membawa cita rasa otentik Bakpia Pathok khas Jogja, yang diproduksi dan disajikan dengan cinta di Semarang. Kami menggunakan resep turun-temurun dengan isian kumbu kacang ijo asli, tanpa bahan pengawet berlebihan, menjamin kualitas dan kelezatan di setiap gigitan.
+            </p>
+            <p class="text-base italic text-gray-500">
+                Kami berkomitmen menjadi oleh-oleh pilihan keluarga Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Keunggulan Produk Section -->
+    <section id="keunggulan" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center brand-accent-brown mb-12">Kenapa Pilih Bakpia 29?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Keunggulan 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-200">
+                    <span class="text-4xl block mb-4 brand-accent-brown">💚</span>
+                    <p class="text-xl font-semibold mb-2 text-gray-800">Bahan Asli & Berkualitas</p>
+                    <p class="text-gray-600">Dibuat dari kumbu kacang ijo pilihan, menjamin rasa otentik yang khas.</p>
+                </div>
+                <!-- Keunggulan 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-200">
+                    <span class="text-4xl block mb-4 brand-accent-brown">📦</span>
+                    <p class="text-xl font-semibold mb-2 text-gray-800">Kemasan Eksklusif</p>
+                    <p class="text-gray-600">Cocok untuk oleh-oleh atau bingkisan, dengan desain yang menarik dan higienis.</p>
+                </div>
+                <!-- Keunggulan 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-200">
+                    <span class="text-4xl block mb-4 brand-accent-brown">⭐</span>
+                    <p class="text-xl font-semibold mb-2 text-gray-800">Pasti Ketagihan</p>
+                    <p class="text-gray-600">Rasa manis yang pas dan tekstur lembut yang membuat Anda ingin terus mencobanya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Produk Section (Mirip Feed Instagram) -->
+    <section id="galeri" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Tampilan Lezat dari Feed Kami</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
+                <!-- Item Galeri (Gunakan Placeholder/Deskripsi Gambar) -->
+                <div class="aspect-square w-full bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden shadow">
+                    <span class="text-xl text-gray-600 text-center">Bakpia Tumpah Ruah<br></span>
+                </div>
+                <div class="aspect-square w-full bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden shadow">
+                    <span class="text-xl text-gray-600 text-center">Kemasan Kotak Merah<br></span>
+                </div>
+                <div class="aspect-square w-full bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden shadow">
+                    <span class="text-xl text-gray-600 text-center">Tumpukan Box Kuning<br></span>
+                </div>
+                <div class="aspect-square w-full bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden shadow">
+                    <span class="text-xl text-gray-600 text-center">Belaian Mung Bean<br></span>
+                </div>
+                <div class="aspect-square w-full bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden shadow">
+                    <span class="text-xl text-gray-600 text-center">Bakpia Pathok Hijau<br></span>
+                </div>
+                <div class="aspect-square w-full bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden shadow">
+                    <span class="text-xl text-gray-600 text-center">Potongan Bakpia<br></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni/Social Proof Section -->
+    <section class="py-16 brand-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl font-bold mb-8">Dilihat oleh Ratusan Pelanggan</h3>
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-12">
+                <div class="p-4 rounded-xl">
+                    <p class="text-5xl font-extrabold">6</p>
+                    <p class="text-xl font-light">Kiriman</p>
+                </div>
+                <div class="p-4 rounded-xl">
+                    <p class="text-5xl font-extrabold">61</p>
+                    <p class="text-xl font-light">Pengikut Setia</p>
+                </div>
+                <div class="p-4 rounded-xl">
+                    <p class="text-5xl font-extrabold">207</p>
+                    <p class="text-xl font-light">Diikuti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Order Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-8 rounded-xl shadow-2xl border-t-4 border-[#8B5E3C]">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 brand-accent-brown">Tertarik Ingin Mencoba?</h3>
+            <p class="text-lg text-gray-600 mb-8">Segera hubungi kami untuk pemesanan atau kunjungi toko kami di Semarang.</p>
+            
+            <!-- WhatsApp CTA -->
+            <a href="https://wa.me/6281351111111?text=Halo%2C%20saya%20tertarik%20dengan%20Bakpia%2029%20Songo%20Likur%20dan%20ingin%20memesan." target="_blank" class="cta-button inline-block w-full sm:w-auto px-10 py-4 text-xl font-bold text-white bg-green-700 rounded-xl shadow-lg hover:bg-green-800 transition duration-300">
+                <span class="mr-2">📞</span> Pesan via WhatsApp
+            </a>
+
+            <div class="mt-8 border-t pt-6">
+                <p class="font-semibold text-gray-800 mb-2">Lokasi Kami:</p>
+                <p class="text-gray-600 italic">Jin.Pattinus / no.24 Semarang</p>
+                <p class="text-gray-600 mt-2">Jam Operasional: Setiap hari (Hubungi untuk detail)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="brand-green py-6 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Bakpia 29 Songo Likur. Dikelola oleh @bakpia29songolikur.</p>
+            <p class="mt-1">Dibuat dengan 💚 untuk oleh-oleh terbaik.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Smooth Scrolling dan Mobile Menu -->
+    <script>
+        // Fungsi untuk toggle menu mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mengambil semua tautan internal (dimulai dengan #)
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    
+                    if (targetId && targetId !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        
+                        if (targetElement) {
+                            // Smooth scroll ke elemen target
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                            
+                            // Tutup menu mobile jika sedang terbuka (hanya berlaku untuk tautan di menu mobile)
+                            const mobileMenu = document.getElementById('mobile-menu');
+                            if (mobileMenu && !mobileMenu.classList.contains('hidden') && this.closest('#mobile-menu')) {
+                                toggleMenu();
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
